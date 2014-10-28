@@ -8,7 +8,7 @@ Usage
 
 Add to your `Gemfile`
 
-    gem 'ajax-status'
+    gem 'ajax_status'
 
 Add to your `application.js` or `application.js.coffee`
     

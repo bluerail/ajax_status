@@ -1,9 +1,6 @@
-require File.expand_path('../lib/ajax_status.rb', __FILE__)
-require File.expand_path('../lib/ajax_status/version', __FILE__)
-
 Gem::Specification.new do |s|
   s.name = 'ajax_status'
-  s.version = AjaxStatus::VERSION
+  s.version = '1.0'
   s.author = 'Martin Tournoij'
   s.email = 'martin@arp242.net'
   s.license = 'MIT'
@@ -11,7 +8,6 @@ Gem::Specification.new do |s|
   s.summary = "A simple loading indicator to show you're doing ajax requests"
 
   s.files = `find . -type f`.split($\)
-  s.require_paths = ['lib']
 
   s.add_dependency 'coffee-rails'
   s.add_dependency 'jquery-rails'

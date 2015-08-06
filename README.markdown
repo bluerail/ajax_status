@@ -4,7 +4,7 @@ A simple loading indicator to show you're doing AJAX requests.
 
 Works with [turbolinks](https://github.com/rails/turbolinks/).
 
-[Here's a demo](https://cdn.rawgit.com/bluerail/ajax_status/master/demo.html?v=1)
+[Here's a demo](https://cdn.rawgit.com/bluerail/ajax_status/8b38a7c40f8c3871981ade7c90a0c39df4495a11/demo.html)
 
 
 Usage

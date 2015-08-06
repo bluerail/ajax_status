@@ -8,7 +8,6 @@ Gem::Specification.new do |s|
   s.summary = "A simple loading indicator to show you're doing ajax requests"
 
   s.files = Dir['{lib}/**/*', 'MIT-LICENSE', 'README.markdown']
-  #s.files = `find . -type f`.split($\)
 
   s.add_dependency 'coffee-rails'
   s.add_dependency 'jquery-rails'

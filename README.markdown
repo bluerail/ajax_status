@@ -1,8 +1,10 @@
+[![Gem Version](https://badge.fury.io/rb/ajax_status.svg)](http://badge.fury.io/rb/ajax_status)
+
 A simple loading indicator to show you're doing AJAX requests.
 
 Works with [turbolinks](https://github.com/rails/turbolinks/).
 
-[Here's a demo](https://cdn.rawgit.com/bluerail/ajax_status/master/demo.html)
+[Here's a demo](https://cdn.rawgit.com/bluerail/ajax_status/master/demo.html?v=1)
 
 
 Usage

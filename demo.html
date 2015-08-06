@@ -1,0 +1,65 @@
+<html>
+	<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://raw.githubusercontent.com/bluerail/ajax_status/master/lib/assets/stylesheets/ajax_status.css">
+
+    <style>
+      .ajax-status-spinner .ajax-status-text {
+        margin-top: .7em
+      }
+
+      #ajax-status.ajax-status-left {
+        left: 0;
+        border-right: 1px solid #b7b7b7;
+        border-bottom: 1px solid #b7b7b7;
+        border-radius: 3px;
+        background-color: #fff;
+        color: #f00;
+        padding: .2em;
+        font-size: 20px;
+      }
+      </style>
+	</head>
+
+	<body>
+    <p class="hide">Hide it!</p>
+    
+    <p class="show">Show with defaults</p>
+    <p class="show-spinner">Show with spinner</p>
+    <p class="show-top-left">Show at top-left</p>
+
+    <script src="http://sugarjs.com/release/current/sugar.min.js"></script>
+		<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://raw.githubusercontent.com/bluerail/ajax_status/master/lib/assets/javascripts/ajax_status.js">
+    <script>
+      defaults = Object.clone(window.ajax_status)
+
+      $('.hide').on('click', function() { $(document).trigger('ajax:complete') })
+      
+      $('.show').on('click', function() {
+        $(document).trigger('ajax:complete')
+        window.ajax_status = Object.clone(defaults)
+        $(document).trigger('ajax:before')
+      });
+
+      $('.show-spinner').on('click', function() {
+        $(document).trigger('ajax:complete')
+        window.ajax_status = Object.clone(defaults)
+        window.ajax_status.text = '<i class="fa fa-spinner fa-spin"></i>'
+        window.ajax_status.animate = false
+        window.ajax_status.class += ' ajax-status-spinner'
+        $(document).trigger('ajax:before')
+      });
+
+      $('.show-top-left').on('click', function() {
+        $(document).trigger('ajax:complete')
+        window.ajax_status = Object.clone(defaults)
+        window.ajax_status.text = '<i class="fa fa-spinner fa-spin"></i>'
+        window.ajax_status.animate = false
+        window.ajax_status.class = 'ajax-status-left'
+        $(document).trigger('ajax:before')
+      });
+    </script>
+	</body>
+</html>

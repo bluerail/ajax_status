@@ -1,0 +1,38 @@
+#ajax-status {
+  z-index: 99999;
+  overflow: hidden;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  text-align: center; }
+  #ajax-status .ajax-status-animate {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -1em;
+    width: 1em; }
+
+.ajax-status-default {
+  width: 10em;
+  margin-left: -5em;
+  height: 2.5em;
+  line-height: 2.5em;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  background-color: #2a9b3f;
+  color: #fff;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.4); }
+  .ajax-status-default .ajax-status-animate {
+    background-image: -webkit-linear-gradient(left, #2a9b3f, #144b1e 50%, #2a9b3f);
+    background-image: linear-gradient(to right, #2a9b3f, #144b1e 50%, #2a9b3f);
+    background-repeat: no-repeat;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF2A9B3F', endColorstr='#FF2A9B3F', GradientType=1); }
+  .ajax-status-default .ajax-status-text {
+    position: absolute;
+    left: 0;
+    width: 10em;
+    text-shadow: -1px 1px #333;
+    font-weight: bold; }
+
+/*# sourceMappingURL=ajax_status.css.map */

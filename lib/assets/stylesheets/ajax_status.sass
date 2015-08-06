@@ -1,0 +1,50 @@
+$ajax_status_width: 10em
+$ajax_status_height: 2.5em
+
+
+#ajax-status
+  // If you're using bootstrap
+  //z-index: $zindex-navbar-fixed + 1;
+  z-index: 99999
+  overflow: hidden
+  display: none
+
+  position: fixed
+  top: 0
+  left: 50%
+  text-align: center
+
+  .ajax-status-animate
+    position: absolute
+    top: 0
+    bottom: 0
+    left: -($ajax_status_width / 10)
+    width: $ajax_status_width / 10
+
+
+.ajax-status-default
+  width: $ajax_status_width
+  margin-left: -($ajax_status_width / 2)
+  height: $ajax_status_height
+  line-height: $ajax_status_height
+  border-bottom-right-radius: 3px
+  border-bottom-left-radius: 3px
+  background-color: #2a9b3f
+  color: #fff
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.4)
+
+  .ajax-status-animate
+    //@include gradient-horizontal-three-colors(#2a9b3f, darken(#2a9b3f, 20%), 50%, #2a9b3f);
+    background-image: -webkit-linear-gradient(left, #2a9b3f, #144b1e 50%, #2a9b3f)
+    background-image: linear-gradient(to right, #2a9b3f, #144b1e 50%, #2a9b3f)
+    background-repeat: no-repeat
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF2A9B3F', endColorstr='#FF2A9B3F', GradientType=1)
+
+  .ajax-status-text
+    // Make sure it's above the animator; z-index doesn't work
+    position: absolute
+    left: 0
+    width: $ajax_status_width
+
+    text-shadow: -1px 1px #333
+    font-weight: bold

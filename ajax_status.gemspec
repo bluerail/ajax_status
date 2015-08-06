@@ -1,13 +1,14 @@
 Gem::Specification.new do |s|
   s.name = 'ajax_status'
   s.version = '1.0'
-  s.author = 'Martin Tournoij'
-  s.email = 'martin@arp242.net'
+  s.authors = ['Martin Tournoij']
+  s.email = ['martin@arp242.net']
   s.license = 'MIT'
-  s.homepage = ''
+  s.homepage = 'https://github.com/bluerail/ajax_status'
   s.summary = "A simple loading indicator to show you're doing ajax requests"
 
-  s.files = `find . -type f`.split($\)
+  s.files = Dir['{lib}/**/*', 'MIT-LICENSE', 'README.markdown']
+  #s.files = `find . -type f`.split($\)
 
   s.add_dependency 'coffee-rails'
   s.add_dependency 'jquery-rails'

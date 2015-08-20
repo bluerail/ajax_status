@@ -2,7 +2,11 @@
 	<head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://raw.githubusercontent.com/bluerail/ajax_status/master/lib/assets/stylesheets/ajax_status.css">
+    <!--
+    <link rel="stylesheet"
+    href="https://raw.githubusercontent.com/bluerail/jquery_ajax_status/master/lib/assets/stylesheets/jquery_ajax_status.css">
+    -->
+    <link rel="stylesheet" href="lib/assets/stylesheets/jquery_ajax_status.css">
 
     <style>
       .ajax-status-spinner .ajax-status-text {
@@ -29,36 +33,43 @@
     <p class="show-spinner">Show with spinner</p>
     <p class="show-top-left">Show at top-left</p>
 
-    <script src="http://sugarjs.com/release/current/sugar.min.js"></script>
 		<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script src="https://raw.githubusercontent.com/bluerail/ajax_status/master/lib/assets/javascripts/ajax_status.js"></script>
+    <!--
+    <script src="https://raw.githubusercontent.com/bluerail/jquery_ajax_status/master/lib/assets/javascripts/jquery_ajax_status.js"></script>
+    -->
+    <script src="lib/assets/javascripts/jquery_ajax_status.js"></script>
     <script>
+      var clone = function(obj) {
+        return Object.create(obj)
+      }
+
       $(document).ready(function() {
-        window.defaults = Object.clone(window.ajax_status)
-        $('.hide').on('click', function() { $(document).trigger('ajax:complete') })
+        window.defaults = clone(window.ajax_status)
+
+        $('.hide').on('click', function() { $(document).trigger('ajaxComplete') })
         
         $('.show').on('click', function() {
-          $(document).trigger('ajax:complete')
-          window.ajax_status = Object.clone(window.defaults)
-          $(document).trigger('ajax:before')
+          $(document).trigger('ajaxComplete')
+          window.ajax_status = clone(window.defaults)
+          $(document).trigger('ajaxStart')
         });
 
         $('.show-spinner').on('click', function() {
-          $(document).trigger('ajax:complete')
-          window.ajax_status = Object.clone(window.defaults)
+          $(document).trigger('ajaxComplete')
+          window.ajax_status = clone(window.defaults)
           window.ajax_status.text = '<i class="fa fa-spinner fa-spin"></i>'
           window.ajax_status.animate = false
           window.ajax_status.class += ' ajax-status-spinner'
-          $(document).trigger('ajax:before')
+          $(document).trigger('ajaxStart')
         });
 
         $('.show-top-left').on('click', function() {
-          $(document).trigger('ajax:complete')
-          window.ajax_status = Object.clone(window.defaults)
+          $(document).trigger('ajaxComplete')
+          window.ajax_status = clone(window.defaults)
           window.ajax_status.text = '<i class="fa fa-spinner fa-spin"></i>'
           window.ajax_status.animate = false
           window.ajax_status.class = 'ajax-status-left'
-          $(document).trigger('ajax:before')
+          $(document).trigger('ajaxStart')
         });
       })
     </script>

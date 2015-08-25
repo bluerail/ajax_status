@@ -27,7 +27,7 @@ window.ajax_status =
   start: ->
     $(document.body).css 'cursor', 'wait'
     clearTimeout timer
-    setTimeout window.ajax_status.show, ajax_status.delay
+    timer = setTimeout window.ajax_status.show, ajax_status.delay
 
 
   # Stop showing the status
@@ -38,7 +38,8 @@ window.ajax_status =
 
 
   # Hide the widget
-  hide: -> $('#ajax-status').slideUp 150, -> $('#ajax-status').remove()
+  hide: ->
+    $('#ajax-status').slideUp 150, -> $('#ajax-status').remove()
 
 
   # Show the widget

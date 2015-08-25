@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = 'jquery_ajax_status'
-  s.version = '1.1'
+  s.version = '1.1.1'
   s.authors = ['Martin Tournoij']
   s.email = ['martin@arp242.net']
   s.license = 'MIT'
@@ -9,7 +9,8 @@ Gem::Specification.new do |s|
 
   s.files = Dir['{lib}/**/*', 'MIT-LICENSE', 'README.markdown']
 
-  s.add_dependency 'coffee-rails'
   s.add_dependency 'jquery-rails'
-  s.add_dependency 'sass'
+  # Not required since we compile them
+  #s.add_dependency 'coffee-rails'
+  #s.add_dependency 'sass'
 end

@@ -26,8 +26,7 @@
   .ajax-status-default .ajax-status-animate {
     background-image: -webkit-linear-gradient(left, #2a9b3f, #144b1e 50%, #2a9b3f);
     background-image: linear-gradient(to right, #2a9b3f, #144b1e 50%, #2a9b3f);
-    background-repeat: no-repeat;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF2A9B3F', endColorstr='#FF2A9B3F', GradientType=1); }
+    background-repeat: no-repeat; }
   .ajax-status-default .ajax-status-text {
     position: absolute;
     left: 0;
